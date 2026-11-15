@@ -1,0 +1,26 @@
+campusbite/
+├── backend/
+│   ├── app/
+│   │   ├── main.py          # FastAPI entry point & CORS
+│   │   ├── database.py      # SQLAlchemy engine & session
+│   │   ├── models.py        # SQL database models
+│   │   ├── schemas.py       # Pydantic request/response schemas
+│   │   ├── auth.py          # JWT token & role-based dependencies
+│   │   └── routers/
+│   │       ├── auth.py      # Register & Login
+│   │       ├── customer.py  # Browse, order, track
+│   │       ├── owner.py     # Menu CRUD, order status updates
+│   │       └── delivery.py  # View available/assigned orders, deliver
+│   ├── requirements.txt
+│   └── Dockerfile
+├── frontend/
+│   ├── src/
+│   │   ├── api.js           # Axios client with JWT interceptor
+│   │   ├── App.jsx          # Role-based routing
+│   │   └── pages/
+│   │       ├── Login.jsx
+│   │       ├── CustomerDashboard.jsx
+│   │       ├── OwnerDashboard.jsx
+│   │       └── DeliveryDashboard.jsx
+│   └── package.json
+└── docker-compose.yml

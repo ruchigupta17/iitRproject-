@@ -1,0 +1,13 @@
+services:
+  backend:
+    build: ./CampusBite/venv/Backend
+    container_name: campusbite_backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./campusbite.db
+      - SECRET_KEY=replace_with_your_private_random_secret
+      - OPENAI_API_KEY=your_openai_api_key_here
+    volumes:
+      - ./CampusBite/venv/Backend:/app
+    restart: always
